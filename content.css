@@ -1,0 +1,74 @@
+.bil-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --bil-color: rgb(113, 118, 123);
+}
+
+.bil-btn {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--bil-color);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.bil-btn:hover,
+.bil-btn:focus-visible {
+  color: #00ba7c;
+  background-color: rgba(0, 186, 124, 0.12);
+}
+
+.bil-menu {
+  position: fixed;
+  z-index: 2147483647;
+  min-width: 210px;
+  padding: 6px;
+  border-radius: 14px;
+  font-family: system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 0 12px rgba(101, 119, 134, 0.35), 0 0 3px rgba(101, 119, 134, 0.35);
+}
+
+.bil-menu[data-theme="light"] { background: #fff; color: #0f1419; }
+.bil-menu[data-theme="dark"]  { background: #15202b; color: #e7e9ea; }
+
+.bil-item {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.bil-menu[data-theme="light"] .bil-item:hover:not(:disabled) { background: rgba(15, 20, 25, 0.08); }
+.bil-menu[data-theme="dark"]  .bil-item:hover:not(:disabled) { background: rgba(231, 233, 234, 0.1); }
+
+.bil-item:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.bil-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: #00ba7c;
+  color: #fff;
+  font: 14px system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}

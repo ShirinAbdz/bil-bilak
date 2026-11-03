@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Bil Bilak | بیل بیلک",
+  "version": "1.0.0",
+  "description": "افزودن دکمه بیل به توییت‌ها: دانلود تصویر، ویدیو، گیف و کپی متن.",
+  "permissions": ["downloads"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["inject.js"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
