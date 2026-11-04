@@ -16,7 +16,9 @@
   border-radius: 50%;
   cursor: pointer;
   color: var(--bil-color);
-  transition: background-color 0.15s, color 0.15s;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
 }
 
 .bil-btn:hover,
@@ -27,17 +29,32 @@
 
 .bil-menu {
   position: fixed;
+  direction: ltr;
+  text-align: left;
   z-index: 2147483647;
   min-width: 210px;
   padding: 6px;
   border-radius: 14px;
-  font-family: system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Tahoma,
+    sans-serif;
   font-size: 14px;
-  box-shadow: 0 0 12px rgba(101, 119, 134, 0.35), 0 0 3px rgba(101, 119, 134, 0.35);
+  box-shadow:
+    0 0 12px rgba(101, 119, 134, 0.35),
+    0 0 3px rgba(101, 119, 134, 0.35);
 }
 
-.bil-menu[data-theme="light"] { background: #fff; color: #0f1419; }
-.bil-menu[data-theme="dark"]  { background: #15202b; color: #e7e9ea; }
+.bil-menu[data-theme="light"] {
+  background: #fff;
+  color: #0f1419;
+}
+.bil-menu[data-theme="dark"] {
+  background: #15202b;
+  color: #e7e9ea;
+}
 
 .bil-item {
   all: unset;
@@ -47,12 +64,16 @@
   padding: 10px 12px;
   border-radius: 8px;
   cursor: pointer;
-  text-align: right;
+  text-align: left;
   white-space: nowrap;
 }
 
-.bil-menu[data-theme="light"] .bil-item:hover:not(:disabled) { background: rgba(15, 20, 25, 0.08); }
-.bil-menu[data-theme="dark"]  .bil-item:hover:not(:disabled) { background: rgba(231, 233, 234, 0.1); }
+.bil-menu[data-theme="light"] .bil-item:hover:not(:disabled) {
+  background: rgba(15, 20, 25, 0.08);
+}
+.bil-menu[data-theme="dark"] .bil-item:hover:not(:disabled) {
+  background: rgba(231, 233, 234, 0.1);
+}
 
 .bil-item:disabled {
   opacity: 0.38;
@@ -69,6 +90,11 @@
   border-radius: 10px;
   background: #00ba7c;
   color: #fff;
-  font: 14px system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  font:
+    14px system-ui,
+    -apple-system,
+    "Segoe UI",
+    Tahoma,
+    sans-serif;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
