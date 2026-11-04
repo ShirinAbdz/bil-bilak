@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Bil Bilak | بیل بیلک",
+  "name": "Bil Bilak",
   "version": "1.0.0",
-  "description": "افزودن دکمه بیل به توییت‌ها: دانلود تصویر، ویدیو، گیف و کپی متن.",
+  "description": "Adds a shovel button to tweets: download images, videos, GIFs and copy text.",
   "permissions": ["downloads"],
   "background": {
     "service_worker": "background.js"

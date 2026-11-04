@@ -14,6 +14,8 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         sendResponse({ ok: !err, error: err && err.message });
       }
     );
-    return true; // پاسخ async
+    return true; 
   }
 });
+
+

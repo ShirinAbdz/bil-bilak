@@ -1,6 +1,6 @@
-// اجرا در context خود صفحه (MAIN world).
-// فقط پاسخ‌هایی رو می‌خونه که خود توییتر برای نمایش تایم‌لاین گرفته؛
-// هیچ درخواست اضافه‌ای ارسال نمی‌کنه.
+// Runs in the page's own context (MAIN world).
+// Only reads responses that Twitter itself fetched to render the timeline;
+// it does not send any extra requests.
 (() => {
   if (window.__bilbilakHooked) return;
   window.__bilbilakHooked = true;
